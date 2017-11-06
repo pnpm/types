@@ -29,23 +29,3 @@ export interface PackageJson {
   cpu?: string[],
   os?: string[],
 }
-
-// Most of the fields in PackageMetadata are also in PackageJson
-// except the `deprecated` field
-export interface PackageMetadata {
-  name: string,
-  version: string,
-  dependencies?: Dependencies,
-  devDependencies?: Dependencies,
-  optionalDependencies?: Dependencies,
-  peerDependencies?: Dependencies,
-  bundleDependencies?: string[],
-  bundledDependencies?: string[],
-  engines?: {
-    node?: string,
-    npm?: string,
-  },
-  cpu?: string[],
-  os?: string[],
-  deprecated?: string,
-}
