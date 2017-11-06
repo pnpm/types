@@ -1,5 +1,5 @@
-export type Dependencies = {
-  [name: string]: string
+export interface Dependencies {
+  [name: string]: string,
 }
 
 export type PackageBin = string | {[commandName: string]: string}
@@ -19,9 +19,9 @@ export interface PackageJson {
   bundleDependencies?: string[],
   bundledDependencies?: string[],
   scripts?: {
-    [name: string]: string
+    [name: string]: string,
   },
-  config?: Object,
+  config?: object,
   engines?: {
     node?: string,
     npm?: string,
