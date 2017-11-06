@@ -1,0 +1,42 @@
+{
+  "name": "@pnpm/types",
+  "version": "0.0.0",
+  "description": "Basic types used by pnpm",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "mos test && tslint -c tslint.json -p .",
+    "prepublishOnly": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnpm/types.git"
+  },
+  "keywords": [
+    "pnpm",
+    "types"
+  ],
+  "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pnpm/types/issues"
+  },
+  "homepage": "https://github.com/pnpm/types#readme",
+  "devDependencies": {
+    "mos": "^2.0.0-alpha.3",
+    "mos-plugin-readme": "^1.0.4",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1"
+  },
+  "mos": {
+    "plugins": [
+      "readme"
+    ],
+    "installation": {
+      "useShortAlias": true
+    }
+  }
+}
