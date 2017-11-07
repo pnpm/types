@@ -1,5 +1,7 @@
 # @pnpm/types
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pnpm/types.svg)](https://greenkeeper.io/)
+
 > Basic types used by pnpm
 
 <!--@shields('npm', 'travis')-->
