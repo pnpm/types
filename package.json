@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "test": "mos test && tslint -c tslint.json -p .",
-    "prepublishOnly": "tsc"
+    "tsc": "rimraf lib && tsc",
+    "prepublishOnly": "npm run tsc"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "mos": "^2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
+    "rimraf": "^2.6.2",
     "tslint": "^5.8.0",
     "typescript": "^2.6.1"
   },
