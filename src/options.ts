@@ -4,8 +4,8 @@ export interface LogBase {
   level: 'debug' | 'info' | 'warn' | 'error',
 }
 
-export type PnpmOptions = {
-  rawNpmConfig?: Object,
+export interface PnpmOptions {
+  rawNpmConfig?: object,
   global?: boolean,
   prefix?: string,
   bin?: string,
@@ -77,7 +77,7 @@ export type PnpmOptions = {
 export type ReadPackageHook = (pkg: PackageManifest) => PackageManifest
 
 export type StrictPnpmOptions = PnpmOptions & {
-  rawNpmConfig: Object,
+  rawNpmConfig: object,
   global: boolean,
   prefix: string,
   bin: string,
