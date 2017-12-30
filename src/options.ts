@@ -58,7 +58,9 @@ export interface PnpmOptions {
   lock?: boolean,
   childConcurrency?: number,
   repeatInstallDepth?: number,
+  ignorePnpmfile?: boolean,
   independentLeaves?: boolean,
+  packageImportMethod?: 'auto' | 'hardlink' | 'copy' | 'reflink',
 
   // cannot be specified via configs
   update?: boolean,
@@ -130,8 +132,10 @@ export type StrictPnpmOptions = PnpmOptions & {
   lock: boolean,
   childConcurrency: number,
   repeatInstallDepth: number,
+  ignorePnpmfile: boolean,
   independentLeaves: boolean,
   locks: string,
+  packageImportMethod: 'auto' | 'hardlink' | 'copy' | 'reflink',
 
   // cannot be specified via configs
   update: boolean,
