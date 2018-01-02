@@ -6,6 +6,7 @@ export interface LogBase {
 
 export interface PnpmOptions {
   rawNpmConfig?: object,
+  dryRun?: boolean,
   global?: boolean,
   prefix?: string,
   bin?: string,
@@ -81,6 +82,7 @@ export type ReadPackageHook = (pkg: PackageManifest) => PackageManifest
 
 export type StrictPnpmOptions = PnpmOptions & {
   rawNpmConfig: object,
+  dryRun: boolean,
   global: boolean,
   prefix: string,
   bin: string,
