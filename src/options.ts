@@ -6,7 +6,7 @@ export interface LogBase {
 
 export interface PnpmOptions {
   rawNpmConfig?: object,
-  dryRun?: boolean,
+  dryRun?: boolean, // This option might be not supported ever
   global?: boolean,
   prefix?: string,
   bin?: string,
@@ -62,6 +62,7 @@ export interface PnpmOptions {
   ignorePnpmfile?: boolean,
   independentLeaves?: boolean,
   packageImportMethod?: 'auto' | 'hardlink' | 'copy' | 'reflink',
+  shrinkwrapOnly?: boolean, // like npm's --package-lock-only
 
   // cannot be specified via configs
   update?: boolean,
@@ -82,7 +83,7 @@ export type ReadPackageHook = (pkg: PackageManifest) => PackageManifest
 
 export type StrictPnpmOptions = PnpmOptions & {
   rawNpmConfig: object,
-  dryRun: boolean,
+  dryRun: boolean, // This option might be not supported ever
   global: boolean,
   prefix: string,
   bin: string,
@@ -138,6 +139,7 @@ export type StrictPnpmOptions = PnpmOptions & {
   independentLeaves: boolean,
   locks: string,
   packageImportMethod: 'auto' | 'hardlink' | 'copy' | 'reflink',
+  shrinkwrapOnly: boolean, // like npm's --package-lock-only
 
   // cannot be specified via configs
   update: boolean,
