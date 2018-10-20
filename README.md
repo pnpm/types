@@ -1,3 +1,5 @@
+> this repo has been move to the pnpm monorepo https://github.com/pnpm/pnpm/tree/master/packages/types
+
 # @pnpm/types
 
 > Basic types used by pnpm
